@@ -17,6 +17,7 @@ define(function (require) {
         router.useConvention();
         router.mapNav('home');
         router.mapNav('browsecatalog');
+        router.mapNav('scan');
         app.setRoot('viewmodels/shell', 'entrance');
     });
 });

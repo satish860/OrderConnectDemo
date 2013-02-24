@@ -182,7 +182,7 @@
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\images\LiquidPeraceticAcid.jpg" />
     <Content Include="Content\images\logo.png" />
-    <Content Include="Content\images\samsung-galaxy-s3.jpeg" />
+    <Content Include="Content\images\samsung-galaxy-s3.jpg" />
     <Content Include="Content\images\StorageJar.jpg" />
     <Content Include="Content\jquery.fancybox.css" />
     <Content Include="Content\metro-bootstrap.css" />
