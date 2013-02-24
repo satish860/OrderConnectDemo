@@ -162,7 +162,6 @@
     <Content Include="App\viewmodels\browsecatalog.js" />
     <Content Include="App\viewmodels\scan.js" />
     <Content Include="App\views\browsecatalog.html" />
-    <Content Include="App\views\detail.html" />
     <Content Include="App\views\home.html" />
     <Content Include="App\viewmodels\home.js" />
     <Content Include="App\viewmodels\shell.js" />
@@ -183,7 +182,7 @@
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\images\LiquidPeraceticAcid.jpg" />
-    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\logo.gif" />
     <Content Include="Content\images\omron-bp.jpg" />
     <Content Include="Content\images\StorageJar.jpg" />
     <Content Include="Content\images\thermometer.jpg" />
