@@ -1,6 +1,10 @@
-﻿define(function (require) {
+﻿/// <reference path="../../Scripts/knockout-2.2.1.debug.js" />
+
+
+define(function (require) {
     var http = require('durandal/http'),
-        system = require('durandal/system');
+        system = require('durandal/system'),
+        app=require('durandal/app');
 
     var products = ko.observableArray();
     var categories = ko.observableArray(['ALL', 'Laboratory Products', 'Medical and Surgical Products', 'Physician Office Products', 'Snowden-Pencer® Products', 'Surgery Center']);
@@ -16,7 +20,7 @@
     return {
         productList: products,
         Categories: categories,
-        CartList:cartList,
+        CartList: cartList,
         activate: function () {
             products.removeAll();
             $.getJSON("/api/product", function (data) {
@@ -26,7 +30,7 @@
                 });
             });
         },
-        AddtoCart:function(data) {
+        AddtoCart: function (data) {
             cartList.push(new productViewModel(data.Name, data.Description, data.Category));
             system.log(cartList());
         },

@@ -1,31 +1,37 @@
-﻿<div class="container" style="padding-top: 80px;">
-    <div class="span5">
-        <div class="row">
-            <div class="well">
-                <label class="control-label" for="item">
-                    <h1>Scan Item</h1>
-                </label>
-                <input type="text" id="item" placeholder="Item" class="input-xlarge"
-                    data-bind="value: scanViewModel.item, valueUpdate: 'afterkeydown', event: { keyup: search }">
+﻿<div id="wrap">
+    <div class="container" style="padding-top: 80px;">
+        <div class="span5">
+            <div class="row">
+                <div class="well">
+                    <label class="control-label" for="item">
+                        <h1>Scan Item</h1>
+                    </label>
+                    <input type="text" id="item" placeholder="Item" class="input-xlarge"
+                        data-bind="value: scanViewModel.item, valueUpdate: 'afterkeydown', event: { keyup: search }">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="span6 well" data-bind="foreach: searchResults">
-         <h3 data-bind="text: Category"></h3>
-        <div class="span1" style="float: left">
-           
-            <a href="#">
-                <img data-bind="attr: { src: ImageSource }">
-            </a>
-            <div class="caption">
-                <center><strong><span data-bind="text: Name"></span></strong></br>
+        <div class="span6 well" data-bind="foreach: searchResults">
+            <h3 data-bind="text: Category"></h3>
+            <div class="span1" style="float: left">
+
+                <a href="#">
+                    <img data-bind="attr: { src: ImageSource }">
+                </a>
+                <div class="caption">
+                    <center><strong><span data-bind="text: Name"></span></strong>
+                    </br>
                            
+                </div>
+            </div>
+            <div class="span4" style="float: left" data-bind="text: Description">
             </div>
         </div>
-        <div class="span4" style="float: left" data-bind="text: Description">
-        </div>
-
-
-
     </div>
+</div>
+<div id="footer">
+
+    <ul class="pager" style="padding-top:14px">
+        <li><a href="#browsecatalog">Browse</a></li>
+    </ul>
 </div>
