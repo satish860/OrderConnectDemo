@@ -1,4 +1,5 @@
 ﻿/// <reference path="../../Scripts/knockout-2.2.1.debug.js" />
+/// <reference path="../durandal/http.js" />
 
 
 
@@ -19,8 +20,7 @@ define(function (require) {
         searchResults:searchResults,
         search: function () {
             var data = scanViewModel.item();
-            console.log(data.size);
-            if (data.length > 4) {
+            if (data.length > 2) {
                 searchResults.removeAll();
                 $.getJSON("/api/Product/GetSearch?keywords=" + data, function (results) {
                     $.each(results, function (key, list) {
@@ -34,6 +34,5 @@ define(function (require) {
             console.log('scan handled 2');
         }
     };
-
-    ko.applyBindings(scanViewModel);
+    
 });

@@ -12,26 +12,28 @@
             </div>
         </div>
         <div class="span6 well" data-bind="foreach: searchResults">
-            <h3 data-bind="text: Category"></h3>
-            <div class="span1" style="float: left">
+            <div style="clear:both">
+                <h3 data-bind="text: Category"></h3>
+                <div class="span1" style="float: left">
 
-                <a href="#">
-                    <img data-bind="attr: { src: ImageSource }">
-                </a>
-                <div class="caption">
-                    <center><strong><span data-bind="text: Name"></span></strong>
-                    </br>
+                    <a href="#">
+                        <img data-bind="attr: { src: ImageSource }">
+                    </a>
+                    <div class="caption">
+                        <center><strong><span data-bind="text: Name"></span></strong>
+                        </br>
                            
+                    </div>
                 </div>
-            </div>
-            <div class="span4" style="float: left" data-bind="text: Description">
+                <div class="span4" style="float: left" data-bind="text: Description">
+                </div>
             </div>
         </div>
     </div>
 </div>
 <div id="footer">
 
-    <ul class="pager" style="padding-top:14px">
+    <ul class="pager" style="padding-top: 14px">
         <li><a href="#browsecatalog">Browse</a></li>
     </ul>
 </div>
