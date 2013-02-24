@@ -4,7 +4,8 @@
 
 define(function (require) {
     var http = require('durandal/http'),
-        system = require('durandal/system');
+        system = require('durandal/system'),
+        app=require('durandal/app');
 
 
     var scanViewModel = {

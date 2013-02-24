@@ -162,6 +162,7 @@
     <Content Include="App\viewmodels\browsecatalog.js" />
     <Content Include="App\viewmodels\scan.js" />
     <Content Include="App\views\browsecatalog.html" />
+    <Content Include="App\views\detail.html" />
     <Content Include="App\views\home.html" />
     <Content Include="App\viewmodels\home.js" />
     <Content Include="App\viewmodels\shell.js" />

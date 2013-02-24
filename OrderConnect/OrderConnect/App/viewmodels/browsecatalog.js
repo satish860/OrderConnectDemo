@@ -10,6 +10,8 @@ define(function (require) {
     var categories = ko.observableArray(['ALL', 'Laboratory Products', 'Medical and Surgical Products', 'Physician Office Products', 'Snowden-Pencer® Products', 'Surgery Center']);
     var orginalProductList = ko.observableArray();
     var cartList = ko.observableArray();
+    var shoppingCartLength = ko.observable(0);
+    var productItem = ko.observable();
     var productViewModel = function (name, description, category) {
         var self = this;
         self.Name = name;
@@ -21,6 +23,8 @@ define(function (require) {
         productList: products,
         Categories: categories,
         CartList: cartList,
+        productItem:productItem,
+        shoppingCartLength:shoppingCartLength,
         activate: function () {
             products.removeAll();
             $.getJSON("/api/product", function (data) {
@@ -30,8 +34,23 @@ define(function (require) {
                 });
             });
         },
+        search: function () {
+            products.removeAll();
+            var data = productItem();
+            if (data.length > 2) {
+                $.getJSON("/api/Product/GetSearch?keywords=" + data, function (results) {
+                    $.each(results, function (key, list) {
+                        products.push(list);
+                    });
+                });
+            }
+
+        },
         AddtoCart: function (data) {
+            
             cartList.push(new productViewModel(data.Name, data.Description, data.Category));
+            system.log(cartList().length);
+            shoppingCartLength(cartList().length);
             system.log(cartList());
         },
         categorylinkClick: function (data) {
@@ -49,11 +68,11 @@ define(function (require) {
                 }
             });
         },
-        search: function (data, event) {
+       /* search: function (data, event) {
             if (event.keyCode == 13) {
                 system.log('enter Code has been Clicked');
             }
             return true;
-        }
+        }*/
     };
 });
